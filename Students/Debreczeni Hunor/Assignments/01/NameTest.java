@@ -14,5 +14,6 @@ public class NameTest extends Name {
         Assert.assertEquals("LastName, FirstName Mr.",Name.invert("Mr. FirstName LastName"));
         Assert.assertEquals("LastName, FirstName Mr. PhD.",Name.invert("Mr. PhD. FirstName LastName"));
         Assert.assertEquals("Doe, John Mr. PhD. Dr. Ing.",Name.invert("    Mr.      PhD.     Dr.    Ing.    John    Doe   "));
+        Assert.assertEquals("Doe, John Michael Jackson Mr. PhD. Dr. Ing.",Name.invert("    Mr.      PhD.     Dr.    Ing.    John    Michael    Jackson    Doe   "));
     }
 }

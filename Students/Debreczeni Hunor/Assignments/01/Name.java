@@ -1,9 +1,10 @@
 public class Name {
 
-    /** Inverts a name: First Last  ->  Last, First
-     *                  Single      ->  Single
-     *  Removes Spaces around and in between the names
-     *  Takes in consideration the Titles also
+    /**
+     * Inverts a name: First Last  ->  Last, First
+     * Single      ->  Single
+     * Removes Spaces around and in between the names
+     * Takes in consideration the titles also
      *
      * @param CustomerName
      * @return
@@ -15,19 +16,21 @@ public class Name {
         CustomerName = CustomerName.trim().replaceAll(" +", " ");
         String[] splitName = CustomerName.split(" ");
         String Title = "";
-        for (int i = 0; i < splitName.length - 2; i++) {
-            Title += splitName[i] + " ";
+        String FirstName = "";
+        for (int i = 0; i < splitName.length - 1; i++) {
+            if (splitName[i].charAt(splitName[i].length() - 1) == '.')
+                Title += splitName[i] + " ";
+            else
+                FirstName += splitName[i] + " ";
         }
-        Title = Title.trim();
-        if (splitName.length > 2){
-            return splitName[splitName.length - 1] + ", " + splitName[splitName.length - 2] + " " + Title;
-        }else if(splitName.length == 2){
-            return splitName[splitName.length - 1] + ", " + splitName[splitName.length - 2];
+        if(splitName.length == 1){
+            return splitName[splitName.length - 1];
         }
-        return  splitName[splitName.length - 1];
+        String InvertedName = splitName[splitName.length -1] + ", " + FirstName + " " + Title;
+        return InvertedName.trim().replaceAll(" +", " ");
     }
 
     public static void main(String[] args) {
-
+        System.out.println(invert("Mr. Dr. Hunor Doktor Debreczeni"));
     }
 }
