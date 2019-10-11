@@ -23,14 +23,14 @@ public class Name {
             else
                 FirstName += splitName[i] + " ";
         }
-        if(splitName.length == 1){
+        if (splitName.length == 1) {
             return splitName[splitName.length - 1];
         }
-        String InvertedName = splitName[splitName.length -1] + ", " + FirstName + " " + Title;
+        String InvertedName = splitName[splitName.length - 1] + ", " + FirstName + " " + Title;
         return InvertedName.trim().replaceAll(" +", " ");
     }
 
     public static void main(String[] args) {
-        System.out.println(invert("Mr. Dr. Hunor Doktor Debreczeni"));
+
     }
 }
