@@ -30,11 +30,13 @@ public class HotelManager {
     public static boolean isClean(int roomNumber) throws InvalidRoomNumberException {
         if (roomNumber < FIRST_ROOM_NUMBER
                 || roomNumber > LAST_ROOM_NUMBER
-                || roomNumber % 100 > LAST_ROOM_NUMBER_PER_FLOOR)
+                || roomNumber % 100 > LAST_ROOM_NUMBER_PER_FLOOR) {
             throw new InvalidRoomNumberException(roomNumber);
+        }
 
-        if (roomNumber / 100 == 2)
+        if (roomNumber / 100 == 2) {
             return false;
+        }
         return roomNumber % 2 == 0;
     }
 }
