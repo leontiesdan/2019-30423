@@ -24,7 +24,7 @@ public class NameInverter
 			{
 				if (str.indexOf(' ') == 0)
 				{
-					str.trim();
+					str = str.trim();
 					return str;
 				}
 				else if (str.indexOf(' ') == -1)
@@ -37,7 +37,7 @@ public class NameInverter
 					int i = 0;
 					boolean flagStatus = false;
 					boolean flagTitle = false;
-					String newString = null;
+					String newString = "";
 					while (i < 4)
 					{
 						if (i == 0)
