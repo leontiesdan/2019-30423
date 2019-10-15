@@ -9,14 +9,14 @@ public class MainTest {
     public static void TestNameInverter(){
 
 
-        Assert.assertEquals(Main.NameInverter("Singleton"),"Singleton");
-        assertNull(Main.NameInverter(null));
-        Assert.assertEquals(Main.NameInverter(""),"");
-        Assert.assertEquals(Main.NameInverter("FirstName LastName"),"LastName, FirstName");
-        Assert.assertEquals(Main.NameInverter(" SingleWord "),"SingleWord");
-        Assert.assertEquals(Main.NameInverter(" FirstName LastName " ),"LastName, FirstName");
-        Assert.assertEquals(Main.NameInverter("Mr. FirstName LastName" ),"LastName, FirstName Mr.");
-        Assert.assertEquals(Main.NameInverter("Mr. Phd. FirstName LastName" ),"LastName, FirstName Mr. Phd.");
+        Assert.assertEquals(Main.invertName("Singleton"),"Singleton");
+        assertNull(Main.invertName(null));
+        Assert.assertEquals(Main.invertName(""),"");
+        Assert.assertEquals(Main.invertName("FirstName LastName"),"LastName, FirstName");
+        Assert.assertEquals(Main.invertName(" SingleWord "),"SingleWord");
+        Assert.assertEquals(Main.invertName(" FirstName LastName " ),"LastName, FirstName");
+        Assert.assertEquals(Main.invertName("Mr. FirstName LastName" ),"LastName, FirstName Mr.");
+        Assert.assertEquals(Main.invertName("Mr. Phd. FirstName LastName" ),"LastName, FirstName Mr. Phd.");
 
 
     }

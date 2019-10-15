@@ -5,11 +5,11 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         String name= scanner.nextLine();
-        name=NameInverter(name);
+        name=invertName(name);
         System.out.println(name);
     }
 
-    public static String NameInverter (String name ) {
+    public static String invertName (String name ) {
         if(name == null)
             return  null;
 
@@ -26,8 +26,6 @@ public class Main {
         {
             invertedName = invertedName + " " + namesAndTitles[i];
         }
-
-
 
         return  invertedName;
     }
