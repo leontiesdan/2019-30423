@@ -1,6 +1,12 @@
 package assignment_02;
 
+/**
+ * A class for savings accounts.
+ * <p>
+ * This class extends the Accounts class by being able to set an interest and to update the balance with it.
+ */
 public class SavingsAccount extends Account {
+
     private double interest;
 
     public SavingsAccount(int number, double interest) {
@@ -16,6 +22,9 @@ public class SavingsAccount extends Account {
         this.interest = interest;
     }
 
+    /**
+     * Increases the balance by the interest.
+     */
     public void addInterest() {
         this.deposit(interest);
     }
