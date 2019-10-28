@@ -1,4 +1,4 @@
-package assignment_02;
+package assignment_02.bank;
 
 /**
  * A class for bank accounts.

@@ -1,5 +1,10 @@
 package assignment_02;
 
+import assignment_02.bank.Account;
+import assignment_02.bank.Bank;
+import assignment_02.bank.CurrentAccount;
+import assignment_02.bank.SavingsAccount;
+
 public class Main {
     public static void main(String[] args) {
         Bank bank = new Bank();

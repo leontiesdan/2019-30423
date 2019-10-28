@@ -1,4 +1,4 @@
-package assignment_02;
+package assignment_02.bank;
 
 import java.util.ArrayList;
 import java.util.List;

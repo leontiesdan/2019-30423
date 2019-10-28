@@ -1,5 +1,9 @@
 package assignment_02;
 
+import assignment_02.bank.Account;
+import assignment_02.bank.Bank;
+import assignment_02.bank.CurrentAccount;
+import assignment_02.bank.SavingsAccount;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,10 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BankTest {
 
