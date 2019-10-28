@@ -50,7 +50,7 @@ public class NameInverter {
         String[] words = name.split(" ");
 
         for (int i = 0; i < words.length; i++) {
-            if (words[i].endsWith(".")) {
+            if (words[i].endsWith("")) {
                 if (title.length() != 0) {
                     title.append(" ");
                 }
