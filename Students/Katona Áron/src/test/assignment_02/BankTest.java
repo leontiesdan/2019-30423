@@ -74,7 +74,7 @@ class BankTest {
         Account account1 = new SavingsAccount(1, 10);
         Account account2 = new CurrentAccount(2, 10);
         Account account3 = new Account(3);
-        Bank bank = new Bank(new ArrayList<>(List.of(account1, account2)));
+        Bank bank = new Bank(List.of(account1, account2));
 
         bank.payDividend(10);
         Assertions.assertEquals(5, account1.getBalance());

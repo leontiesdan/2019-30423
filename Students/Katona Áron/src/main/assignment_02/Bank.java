@@ -17,11 +17,12 @@ public class Bank {
     }
 
     public Bank(List<Account> accounts) {
-        this.accounts = accounts;
+        this.accounts = new ArrayList<>(accounts);
     }
 
     /**
      * Adds the account to the bank.
+     *
      * @param account account to be added
      */
     public void openAccount(Account account) {
@@ -30,6 +31,7 @@ public class Bank {
 
     /**
      * Deletes an account from the bank given by the account number.
+     *
      * @param accountNumber the identifying number of the account
      */
     public void closeAccount(int accountNumber) {
@@ -38,7 +40,7 @@ public class Bank {
 
     /**
      * Updates the accounts.
-     *
+     * <p>
      * The SavingsAccounts will have their balanced increased by the interest.
      * The CurrentAccounts will be alerted (printed) if they are in the overdraft limit.
      */
@@ -54,6 +56,7 @@ public class Bank {
 
     /**
      * Pays a sum evenly between all the accounts.
+     *
      * @param sum sum to be paid
      */
     public void payDividend(double sum) {
