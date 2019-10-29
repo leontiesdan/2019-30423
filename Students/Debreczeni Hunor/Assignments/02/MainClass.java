@@ -10,8 +10,12 @@ public class MainClass {
         bank.deposit(currentAccount, 100);
         bank.withdraw(currentAccount, 300);
 
-        currentAccount.print();
+        bank.print(currentAccount);
 
+        bank.updateAccounts();
+
+        bank.payDivident(150);
+        bank.print(currentAccount);
         bank.updateAccounts();
     }
 }

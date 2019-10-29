@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,5 +40,9 @@ public class Bank {
         if (accountList.contains(account)) {
             account.withdraw(amount);
         }
+    }
+
+    public void print(@NotNull Account account){
+        account.print();
     }
 }
